@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{77990895-4247-4E5A-9474-E3456B62A28D}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>SwippableBottomTabView</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CarouselLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\FriendCellTemplateSelector.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\UserImageCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DynamicTemplateLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)HomePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FriendInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\HospitalInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PlaceInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ProfessionInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SchoolInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SexInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\BaseViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageTabs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FindDoctor\FindDocCityViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FindDoctor\FindDocHospitalViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FindDoctor\FindDocJobViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FindDoctor\FindDocProfessionViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FindDoctor\FindDocProvinceViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FindDoctor\FindPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FindDoctor\PlaceViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FindDoctor\ResultDetailUnregViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FindDoctor\ResultDetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FindDoctor\SearchResultsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Friends\AddContantsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Friends\AddFriendViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Friends\AddResultsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Friends\FriendDetailViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\Friends\FriendPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ICarouselViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\TabbedPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\MyCityViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\MyHospitalViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\MyJobViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\MyProfessionViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\MyProvinceViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\MySchoolViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\MySexViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\UserCenter\UserPageViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\ChangeDataCell.xaml.cs">
+      <DependentUpon>ChangeDataCell.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\FriendListCell.xaml.cs">
+      <DependentUpon>FriendListCell.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\FriendOtherCell.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>FriendOtherCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\NameListCell.xaml.cs">
+      <DependentUpon>NameListCell.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Cells\SettingCell.xaml.cs">
+      <DependentUpon>SettingCell.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\AboutApp.xaml.cs">
+      <DependentUpon>AboutApp.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\ChangeRelation.xaml.cs">
+      <DependentUpon>ChangeRelation.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\ChooseHeart.xaml.cs">
+      <DependentUpon>ChooseHeart.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\ChoosePlaceFirst.xaml.cs">
+      <DependentUpon>ChoosePlaceFirst.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\CleanApp.xaml.cs">
+      <DependentUpon>CleanApp.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\LogoutApp.xaml.cs">
+      <DependentUpon>LogoutApp.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\NewVersion.xaml.cs">
+      <DependentUpon>NewVersion.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\NoUpdate.xaml.cs">
+      <DependentUpon>NoUpdate.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\UpdateApp.xaml.cs">
+      <DependentUpon>UpdateApp.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MyInterest.xaml.cs">
+      <DependentUpon>MyInterest.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MyName.xaml.cs">
+      <DependentUpon>MyName.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MySexold.xaml.cs">
+      <DependentUpon>MySexold.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MyTelphone.xaml.cs">
+      <DependentUpon>MyTelphone.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FindDoctor\FindDocCity.xaml.cs">
+      <DependentUpon>FindDocCity.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FindDoctor\FindDocHospital.xaml.cs">
+      <DependentUpon>FindDocHospital.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FindDoctor\FindDocJob.xaml.cs">
+      <DependentUpon>FindDocJob.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FindDoctor\FindDocProfession.xaml.cs">
+      <DependentUpon>FindDocProfession.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FindDoctor\FindDocProvince.xaml.cs">
+      <DependentUpon>FindDocProvince.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FindDoctor\FindPage.xaml.cs">
+      <DependentUpon>FindPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FindDoctor\NoSearchResult.xaml.cs">
+      <DependentUpon>NoSearchResult.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FindDoctor\ResultDetail.xaml.cs">
+      <DependentUpon>ResultDetail.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FindDoctor\ResultDetailUnreg.xaml.cs">
+      <DependentUpon>ResultDetailUnreg.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\FindDoctor\SearchResults.xaml.cs">
+      <DependentUpon>SearchResults.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Friends\AddContants.xaml.cs">
+      <DependentUpon>AddContants.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Friends\AddFriendPage.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>AddFriendPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Friends\AddNoResults.xaml.cs">
+      <DependentUpon>AddNoResults.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Friends\AddResults.xaml.cs">
+      <DependentUpon>AddResults.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Friends\FriendDetailPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Friends\FriendPage.xaml.cs">
+      <DependentUpon>FriendPage.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MyCity.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MyCity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MyCitySchool.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MyCitySchool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MyHospital.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MyHospital.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MyJob.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MyJob.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MyProfession.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MyProfession.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MyProvince.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MyProvince.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MyProvinceSchool.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MyProvinceSchool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MySchool.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MySchool.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MySex.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>MySex.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfo.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>DetailInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\UserPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\UserCenter\SetPage.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>SetPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Cells\FriendOtherCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Friends\AddFriendPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MyCity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MyCitySchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MyHospital.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MyJob.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MyProfession.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MyProvince.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MyProvinceSchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MySchool.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfoSubPages\MySex.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\DetailInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\UserCenter\SetPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FindDoctor\FindDocProvince.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FindDoctor\FindDocCity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FindDoctor\FindDocHospital.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FindDoctor\FindDocProfession.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FindDoctor\FindDocJob.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\CleanApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\NoUpdate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\NewVersion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\UpdateApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\AboutApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\LogoutApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FindDoctor\FindPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Friends\FriendPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Cells\FriendListCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Cells\ChangeDataCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Cells\SettingCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\ChoosePlaceFirst.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\ChangeRelation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\ChooseHeart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FindDoctor\NoSearchResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FindDoctor\SearchResults.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FindDoctor\ResultDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Friends\AddContants.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\FindDoctor\ResultDetailUnreg.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Friends\AddResults.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Friends\AddNoResults.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Cells\NameListCell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MyInterest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MyName.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MySexold.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Views\Dialogs\UserCenter\MyTelphone.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

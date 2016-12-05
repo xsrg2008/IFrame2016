@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IFrame.Views.Friends.FriendPage"
+             xmlns:local="clr-namespace:IFrame.Controls">
+  <ContentView.Resources>
+    <ResourceDictionary>
+      <local:FriendCellTemplateSelector x:Key="ListTemplateSelector"></local:FriendCellTemplateSelector>
+    </ResourceDictionary>
+  </ContentView.Resources>
+	<StackLayout Spacing="0" VerticalOptions="FillAndExpand" BackgroundColor="#f5f5f5">
+    <StackLayout Orientation="Horizontal"
+                 BackgroundColor="#ffdda0"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Start">
+      <BoxView BackgroundColor="#ffdda0" 
+               HorizontalOptions="Start"
+               HeightRequest="55"
+               WidthRequest="55"/>
+      <Label BackgroundColor="#ffdda0"
+             HorizontalOptions="CenterAndExpand"
+             VerticalOptions="CenterAndExpand"
+             Text="医友"
+             TextColor="White"
+             FontSize="30"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+             HeightRequest="55"/>
+      <Button Image="@drawable/add"
+              HeightRequest="55"
+              WidthRequest="55"
+              BackgroundColor="#ffdda0"
+              HorizontalOptions="End"
+              BorderRadius="0"
+              Clicked="OnAddFriend"/>
+    </StackLayout>
+    <ListView x:Name="FriendList"
+              ItemTemplate="{StaticResource ListTemplateSelector}" 
+              ItemsSource="{Binding FriendInformations}"
+              HasUnevenRows="True"
+              SeparatorColor="#ddd"
+              ItemTapped="OnItemTapped"
+              VerticalOptions="Start">  
+    </ListView>
+  </StackLayout>
+</ContentView>

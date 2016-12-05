@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IFrame.Views.FindDoctor.ResultDetailUnreg">
+  <ScrollView>
+    <StackLayout Spacing="0" BackgroundColor="White">
+      <RelativeLayout>
+        <Image Source="@drawable/personpage"
+               Aspect="Fill"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.25}"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=Constant,Constant=0}"/>
+        <Button Image="@drawable/fanhui"
+                BackgroundColor="#ffdda0"
+                Clicked="OnFhButton"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant,Constant=55}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant,Constant=55}"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=0}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=Constant,Constant=0}"/>
+        <Image Source="{Binding _friendInfo.FriendPhoto}"
+               Aspect="Fill"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.25}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.25}"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.375}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.125}"/>
+        <Label Text="{Binding _friendInfo.Name}"
+               TextColor="Black"
+               FontSize="22"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant,Constant=70}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant,Constant=28}"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5,Constant=-35}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.35,Constant=15}"/>
+        <Label x:Name="AgeImage"
+               Text="*ta的信息为医友完善的资料"
+               TextColor="Red"
+               FontSize="16"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant,Constant=300}"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.5,Constant=-150}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.35,Constant=45}"/>
+        <TableView x:Name="table"
+                   VerticalOptions="Start"
+                   Intent="Menu"
+                   RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=0}"
+                   RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,Property=Y,ElementName=AgeImage,Constant=-5}">
+          <TableRoot>
+            <TableSection>
+              <ViewCell>
+                <ContentView>
+                  <StackLayout Orientation="Horizontal"
+                               Padding="25,0,25,0"
+                               Spacing="10"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               BackgroundColor="White">
+                    <Image Source="@drawable/hospital"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           Aspect="Fill"
+                           HeightRequest="24"
+                           WidthRequest="24"/>
+                    <Label Text="医院"
+                           TextColor="Silver"
+                           FontSize="18"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalOptions="Center"/>
+                    <Label Text="{Binding _friendInfo.Hospital}"
+                           TextColor="Silver"
+                           FontSize="18"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"/>
+                  </StackLayout>
+                </ContentView>
+              </ViewCell>
+              <ViewCell>
+                <ContentView>
+                  <StackLayout Orientation="Horizontal"
+                               Padding="25,0,25,0"
+                               Spacing="10"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               BackgroundColor="White">
+                    <Image Source="@drawable/profession"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           Aspect="Fill"
+                           HeightRequest="24"
+                           WidthRequest="24"/>
+                    <Label Text="科室"
+                           TextColor="Silver"
+                           FontSize="18"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalOptions="Center"/>
+                    <Label Text="{Binding _friendInfo.Profession}"
+                           TextColor="Silver"
+                           FontSize="18"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"/>
+                  </StackLayout>
+                </ContentView>
+              </ViewCell>
+              <ViewCell>
+                <ContentView>
+                  <StackLayout Orientation="Horizontal"
+                               Padding="25,0,25,0"
+                               Spacing="10"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               BackgroundColor="White">
+                    <Image Source="@drawable/goodat"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           Aspect="Fill"
+                           HeightRequest="24"
+                           WidthRequest="24"/>
+                    <Label Text="擅长领域"
+                           TextColor="Silver"
+                           FontSize="18"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalOptions="Center"/>
+                    <Label Text="{Binding _friendInfo.Goodat}"
+                           TextColor="Silver"
+                           FontSize="18"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"/>
+                  </StackLayout>
+                </ContentView>
+              </ViewCell>
+              <ViewCell>
+                <ContentView>
+                  <StackLayout Orientation="Horizontal"
+                               Padding="25,0,25,0"
+                               Spacing="10"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="FillAndExpand"
+                               BackgroundColor="White">
+                    <Image Source="@drawable/job"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Center"
+                           Aspect="Fill"
+                           HeightRequest="24"
+                           WidthRequest="24"/>
+                    <Label Text="职称"
+                           TextColor="Silver"
+                           FontSize="18"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="StartAndExpand"
+                           VerticalOptions="Center"/>
+                    <Label Text="{Binding _friendInfo.Job}"
+                           TextColor="Silver"
+                           FontSize="18"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Center"
+                           HorizontalOptions="End"
+                           VerticalOptions="Center"/>
+                  </StackLayout>
+                </ContentView>
+              </ViewCell>
+            </TableSection>
+          </TableRoot>
+        </TableView>
+        <Label Text="  基本信息"
+               TextColor="White"
+               BackgroundColor="Silver"
+               FontSize="16"
+               HorizontalTextAlignment="Start"
+               VerticalTextAlignment="End"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start"
+               HeightRequest="20"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,Property=Y,ElementName=AgeImage,Constant=25}"/>
+        <Label x:Name="label"
+               Text="  共同好友"
+               TextColor="White"
+               BackgroundColor="Silver"
+               FontSize="16"
+               HorizontalTextAlignment="Start"
+               VerticalTextAlignment="End"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start"
+               HeightRequest="20"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,Property=Y,ElementName=table,Constant=230}"/>
+        <ListView ItemsSource="{Binding _searchResult}"
+                  HasUnevenRows="True"
+                  BackgroundColor="White"
+                  SeparatorColor="#ddd"
+                  VerticalOptions="FillAndExpand"
+                  RelativeLayout.XConstraint="{ConstraintExpression Type=Constant,Constant=0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,Property=Y,ElementName=label,Constant=20}">
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <ContentView>
+                  <Grid HorizontalOptions="FillAndExpand" BackgroundColor="White" RowSpacing="5">
+                    <Grid.RowDefinitions>
+                      <RowDefinition Height="35"/>
+                      <RowDefinition Height="27"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                      <ColumnDefinition Width="70"/>
+                      <ColumnDefinition Width="*"/>
+                      <ColumnDefinition Width="70"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
+                           Source="{Binding FriendPhoto}"
+                           HeightRequest="60"
+                           WidthRequest="60"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                    <StackLayout Grid.Row="0" Grid.Column="1"
+                                 Orientation="Horizontal"
+                                 Spacing="10"
+                                 HorizontalOptions="Start"
+                                 VerticalOptions="End">
+                      <Label Text="{Binding Name}"
+                             FontSize="20"
+                             TextColor="Black"
+                             HorizontalTextAlignment="Center"
+                             VerticalTextAlignment="End"
+                             VerticalOptions="End" />
+                      <Label Text="{Binding Profession}"
+                             TextColor="White"
+                             FontSize="14"
+                             HorizontalTextAlignment="Center"
+                             VerticalTextAlignment="Center"
+                             VerticalOptions="Center"
+                             BackgroundColor="#ffdda0" />
+                      <Label Text="{Binding Hospital}"
+                             TextColor="Silver"
+                             FontSize="16"
+                             HorizontalTextAlignment="Center"
+                             VerticalTextAlignment="Center"
+                             VerticalOptions="Center" />
+                    </StackLayout>
+                    <Label Grid.Row="1" Grid.Column="1"
+                           Text="{Binding Relationship}"
+                           TextColor="Silver"
+                           FontSize="16"
+                           HorizontalTextAlignment="Center"
+                           VerticalTextAlignment="Start"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start" />
+                    <Image Grid.Row="0" Grid.Column="2" Grid.RowSpan="2"
+                           Source="@drawable/next"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"
+                           Aspect="Fill"
+                           HeightRequest="24"
+                           WidthRequest="24"/>
+                  </Grid>
+                </ContentView>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+      </RelativeLayout>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

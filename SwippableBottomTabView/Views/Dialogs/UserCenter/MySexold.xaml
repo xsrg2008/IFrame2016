@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    x:Class="IFrame.Views.Dialogs.UserCenter.MySexold"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;"
+    IsCloseOnBackgroundClick="false">
+    <Grid
+        BackgroundColor="#ffdda0"
+        ColumnSpacing="1"
+        HorizontalOptions="Center"
+        RowSpacing="3"
+        VerticalOptions="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="105" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="160" />
+            <ColumnDefinition Width="160" />
+        </Grid.ColumnDefinitions>
+
+        <StackLayout
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Padding="0,15,0,10"
+            HorizontalOptions="Center"
+            VerticalOptions="Center">
+            <Label
+                FontSize="20"
+                HorizontalOptions="Center"
+                Text="性别"
+                TextColor="Black"
+                VerticalOptions="Start" />
+        </StackLayout>
+
+        <ListView
+            x:Name="MySexList"
+            Grid.Row="1"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            BackgroundColor="White"
+            HasUnevenRows="True"
+            ItemTapped="OnSexTapped"
+            ItemsSource="{Binding MySexsList}"
+            SeparatorColor="#ddd">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ContentView>
+                            <StackLayout
+                                Padding="15,3,5,3"
+                                BackgroundColor="White"
+                                HeightRequest="45"
+                                Orientation="Horizontal"
+                                VerticalOptions="FillAndExpand">
+                                <Label
+                                    FontSize="20"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="{Binding MySex}"
+                                    TextColor="Black"
+                                    VerticalOptions="CenterAndExpand" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+    </Grid>
+</pages:PopupPage>

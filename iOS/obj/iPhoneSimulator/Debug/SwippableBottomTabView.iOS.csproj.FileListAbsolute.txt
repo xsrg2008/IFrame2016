@@ -1,0 +1,14 @@
+E:\Code\XamarinForms.SwippableBottomTabView-master\src\iOS\bin\iPhoneSimulator\Debug\SwippableBottomTabViewiOS.exe
+E:\Code\XamarinForms.SwippableBottomTabView-master\src\iOS\bin\iPhoneSimulator\Debug\SwippableBottomTabViewiOS.pdb
+E:\Code\XamarinForms.SwippableBottomTabView-master\src\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.dll
+E:\Code\XamarinForms.SwippableBottomTabView-master\src\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.dll
+E:\Code\XamarinForms.SwippableBottomTabView-master\src\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Platform.iOS.dll
+E:\Code\XamarinForms.SwippableBottomTabView-master\src\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.dll
+E:\Code\XamarinForms.SwippableBottomTabView-master\src\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Core.xml
+E:\Code\XamarinForms.SwippableBottomTabView-master\src\iOS\bin\iPhoneSimulator\Debug\Xamarin.Forms.Xaml.xml
+E:\Code\XamarinForms.SwippableBottomTabView-master\src\iOS\obj\iPhoneSimulator\Debug\ibtool\_BundleResourceWithLogicalName.items
+E:\Code\XamarinForms.SwippableBottomTabView-master\src\iOS\obj\iPhoneSimulator\Debug\optimized\
+E:\Code\XamarinForms.SwippableBottomTabView-master\src\iOS\obj\iPhoneSimulator\Debug\SwippableBottomTabViewiOS.exe
+E:\Code\XamarinForms.SwippableBottomTabView-master\src\iOS\obj\iPhoneSimulator\Debug\SwippableBottomTabViewiOS.pdb
+E:\Code\XamarinForms.SwippableBottomTabView-master\src\iOS\obj\iPhoneSimulator\Debug\SwippableBottomTabViewiOS.exe.mdb
+E:\Code\XamarinForms.SwippableBottomTabView-master\src\iOS\bin\iPhoneSimulator\Debug\SwippableBottomTabViewiOS.exe.mdb

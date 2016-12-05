@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IFrame.Views.Cells.FriendOtherCell">
+	<StackLayout Orientation="Horizontal" 
+               HorizontalOptions="FillAndExpand" 
+               HeightRequest="50" 
+               BackgroundColor="White"
+               Padding="12,0,0,0"
+               Spacing="18">
+    <Image Source="{Binding FriendPhoto}"
+           HeightRequest="45"
+           WidthRequest="45"
+           HorizontalOptions="Start"
+           VerticalOptions="Center"
+           Aspect="Fill">
+    </Image>
+    <Label Text="{Binding Name}"
+           TextColor="Black"
+           FontSize="20"
+           FontAttributes="None"
+           HorizontalOptions="Start"
+           VerticalOptions="Center">
+    </Label>
+  </StackLayout>
+</ViewCell>

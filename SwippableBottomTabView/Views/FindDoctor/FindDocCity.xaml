@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IFrame.Views.FindDoctor.FindDocCity">
+  <StackLayout Spacing="0">
+    <StackLayout Orientation="Horizontal" Spacing="0">
+      <Button BackgroundColor="#ffdda0"
+              HeightRequest="55"
+              WidthRequest="55"
+              BorderRadius="0"
+              HorizontalOptions="Start"
+              Image="@drawable/fanhui"
+              Clicked="OnFhCicked"></Button>
+      <Label x:Name="label" 
+             BackgroundColor="#ffdda0"
+             Text="{Binding ProvCho}"
+             FontSize="25"
+             FontAttributes="None"
+             HeightRequest="55"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"></Label>
+      <BoxView BackgroundColor="#ffdda0"
+               HeightRequest="55"
+               WidthRequest="55"
+               HorizontalOptions="End"></BoxView>
+    </StackLayout>
+    <ListView x:Name="CityList" ItemsSource="{Binding City}"
+              ItemTapped="OnProvinceTapped"
+              HasUnevenRows="True"
+              BackgroundColor="White"
+              SeparatorColor="#ddd">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ContentView>
+              <StackLayout BackgroundColor="White"
+                           Padding="15,0,5,0"
+                           HeightRequest="45"
+                           Orientation="Horizontal"
+                           VerticalOptions="FillAndExpand">
+                <Label Text="{Binding Place}"
+                       TextColor="Black"
+                       FontSize="20"
+                       HorizontalOptions="StartAndExpand"
+                       VerticalOptions="CenterAndExpand">
+                </Label>
+                <!--
+                <Image BackgroundColor="White"
+                       Source="@drawable/next"
+                       HeightRequest="24"
+                       WidthRequest="24"
+                       Aspect="AspectFit"
+                       HorizontalOptions="End"
+                       VerticalOptions="CenterAndExpand">
+                </Image>
+                -->
+              </StackLayout>
+            </ContentView>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </StackLayout>
+</ContentPage>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="IFrame.Views.UserCenter.MyCitySchool"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <StackLayout Spacing="0">
+        <StackLayout Orientation="Horizontal" Spacing="0">
+            <Button
+                BackgroundColor="#ffdda0"
+                BorderRadius="0"
+                Clicked="OnFhCicked"
+                HeightRequest="55"
+                HorizontalOptions="Start"
+                Image="@drawable/fanhui"
+                WidthRequest="55" />
+            <Label
+                x:Name="Mylabel"
+                BackgroundColor="#ffdda0"
+                FontAttributes="None"
+                FontSize="25"
+                HeightRequest="55"
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                VerticalOptions="Center"
+                VerticalTextAlignment="Center" />
+            <BoxView
+                BackgroundColor="#ffdda0"
+                HeightRequest="55"
+                HorizontalOptions="End"
+                WidthRequest="55" />
+        </StackLayout>
+        <ListView
+            x:Name="MyCityList"
+            BackgroundColor="White"
+            HasUnevenRows="True"
+            ItemTapped="OnCityTapped"
+            ItemsSource="{Binding MyCity}"
+            SeparatorColor="#ddd">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ContentView>
+                            <StackLayout
+                                Padding="15,0,5,0"
+                                BackgroundColor="White"
+                                HeightRequest="45"
+                                Orientation="Horizontal"
+                                VerticalOptions="FillAndExpand">
+                                <Label
+                                    FontSize="20"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="{Binding MyPlace}"
+                                    TextColor="Black"
+                                    VerticalOptions="CenterAndExpand" />
+
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+
+</ContentPage>

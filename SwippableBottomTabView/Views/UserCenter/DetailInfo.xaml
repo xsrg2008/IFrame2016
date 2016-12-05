@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="IFrame.Views.UserCenter.DetailInfo"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+
+    <StackLayout BackgroundColor="#f5f5f5" Spacing="0">
+        <StackLayout Orientation="Horizontal" Spacing="0">
+            <Button
+                BackgroundColor="#ffdda0"
+                BorderRadius="0"
+                Clicked="OnFhCicked"
+                HeightRequest="55"
+                HorizontalOptions="Start"
+                Image="@drawable/fanhui"
+                WidthRequest="55" />
+            <Label
+                BackgroundColor="#ffdda0"
+                FontAttributes="None"
+                FontSize="25"
+                HeightRequest="55"
+                HorizontalOptions="FillAndExpand"
+                HorizontalTextAlignment="Center"
+                Text="详细信息"
+                VerticalOptions="Center"
+                VerticalTextAlignment="Center" />
+            <BoxView
+                BackgroundColor="#ffdda0"
+                HeightRequest="55"
+                HorizontalOptions="End"
+                WidthRequest="55" />
+
+        </StackLayout>
+
+        <TableView Intent="Settings" VerticalOptions="Start">
+            <TableRoot>
+                <TableSection Title="基本信息">
+
+                    <ViewCell Tapped="OnCleanApp">
+                        <ContentView>
+                            <StackLayout
+                                Padding="10,0,10,0"
+                                BackgroundColor="White"
+                                HeightRequest="60"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="10">
+                                <Image
+                                    Aspect="Fill"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    Source="@drawable/alert"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="头像"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Source="@drawable/user"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25" />
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Source="@drawable/next"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+
+
+                    <ViewCell Tapped="OnMynameCell">
+                        <ContentView>
+                            <StackLayout
+                                Padding="10,0,10,0"
+                                BackgroundColor="White"
+                                HeightRequest="60"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="10">
+                                <Image
+                                    Aspect="Fill"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    Source="@drawable/clean"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="姓名"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    x:Name="MyNameLable"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="未输入"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Source="@drawable/next"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+
+                    <ViewCell Tapped="OnSexCell">
+                        <ContentView>
+                            <StackLayout
+                                Padding="10,0,10,0"
+                                BackgroundColor="White"
+                                HeightRequest="60"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="10">
+                                <Image
+                                    Aspect="Fill"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    Source="@drawable/clean"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="性别"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    x:Name="MySexLabel"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="未选择"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Source="@drawable/next"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+
+                    <ViewCell Tapped="OnBirthCell">
+                        <ContentView>
+                            <StackLayout
+                                Padding="10,0,10,0"
+                                BackgroundColor="White"
+                                HeightRequest="60"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="10">
+                                <Image
+                                    Aspect="Fill"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    Source="@drawable/clean"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="生日"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <!--<Label
+                                    x:Name="MyBirthLabel"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="{Binding Source={x:Reference MyBirthDatePicker}, Path=Date, StringFormat='{0:yyyy-MM-dd}'}"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />-->
+
+
+                                <DatePicker
+                                    x:Name="MyBirthDatePicker"
+                                    BackgroundColor="White"
+                                    Date="{x:Static sys:DateTime.Today}"
+                                    Format="yyyy-MM-dd"
+                                    HorizontalOptions="End"
+                                    IsVisible="true"
+                                    VerticalOptions="Center" />
+                                <!--<Label
+                                                                x:Name="MyBirthLabel"
+                                                                FontSize="18"
+                                                                HorizontalOptions="End"
+                                                                Text="{Binding Source={x:Reference MyBirthDatePicker}, Path=Date}"
+                                                                TextColor="Black"
+                                                                VerticalOptions="Center" />
+
+
+                              <DatePicker
+                                  x:Name="MyBirthDatePicker"
+                                  BackgroundColor="White"
+                                  Date="{x:Static sys:DateTime.Now}"
+                                  Format="yyyy-MM-dd"
+                                  HorizontalOptions="End"
+                                  IsVisible="false"
+                                  VerticalOptions="Center" />-->
+
+
+                                <!--<DatePicker
+                                    Date="{x:Static sys:DateTime.Now}"
+                                    HorizontalOptions="End"
+                                    TextColor="Black"
+                                    VerticalOptions="Center">
+                                    <DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+                                    <DatePicker.MinimumDate>
+                                        <sys:DateTime x:FactoryMethod="Parse">
+                                            <x:Arguments>
+                                                <x:String>Jan 1 2000</x:String>
+                                            </x:Arguments>
+                                        </sys:DateTime>
+                                    </DatePicker.MinimumDate>
+                                    <DatePicker.MaximumDate>
+                                        <sys:DateTime x:FactoryMethod="Parse">
+                                            <x:Arguments>
+                                                <x:String>Dec 31 2050</x:String>
+                                            </x:Arguments>
+                                        </sys:DateTime>
+                                    </DatePicker.MaximumDate>
+                                </DatePicker>-->
+
+
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Source="@drawable/next"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+
+                    <ViewCell Tapped="OnTelCell">
+                        <ContentView>
+                            <StackLayout
+                                Padding="10,0,10,0"
+                                BackgroundColor="White"
+                                HeightRequest="60"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="10">
+                                <Image
+                                    Aspect="Fill"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    Source="@drawable/clean"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="电话"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    x:Name="MyTelphoneLabel"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="未输入"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Source="@drawable/next"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+
+                </TableSection>
+                <TableSection Title="教育经历">
+                    <ViewCell Tapped="OnBenkeCell">
+                        <ContentView>
+                            <StackLayout
+                                Padding="10,0,10,0"
+                                BackgroundColor="White"
+                                HeightRequest="60"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="10">
+                                <Image
+                                    Aspect="Fill"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    Source="@drawable/update"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="本科学校"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    x:Name="MyBenkeLabel"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="未选择"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Source="@drawable/next"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+
+                    <ViewCell Tapped="OnMasterCell">
+                        <ContentView>
+                            <StackLayout
+                                Padding="10,0,10,0"
+                                BackgroundColor="White"
+                                HeightRequest="60"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="10">
+                                <Image
+                                    Aspect="Fill"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    Source="@drawable/about"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="硕士学校"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    x:Name="MyMasrerLabel"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="未选择"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Source="@drawable/next"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+
+                    <ViewCell Tapped="OnDoctorCell">
+                        <ContentView>
+                            <StackLayout
+                                Padding="10,0,10,0"
+                                BackgroundColor="White"
+                                HeightRequest="60"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="10">
+                                <Image
+                                    Aspect="Fill"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    Source="@drawable/about"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="博士学校"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    x:Name="MyDoctorLabel"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="未选择"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Source="@drawable/next"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+                    <ViewCell Tapped="OnJinxiuCell">
+                        <ContentView>
+                            <StackLayout
+                                Padding="10,0,10,0"
+                                BackgroundColor="White"
+                                HeightRequest="60"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="10">
+                                <Image
+                                    Aspect="Fill"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    Source="@drawable/about"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="进修学校"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    x:Name="MyJinxiuLabel"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="未选择"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Source="@drawable/next"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+
+                </TableSection>
+                <TableSection Title="工作信息">
+
+                    <ViewCell Tapped="OnPlaceCell">
+                        <ContentView>
+                            <StackLayout
+                                Padding="10,0,10,0"
+                                BackgroundColor="White"
+                                HeightRequest="60"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="10">
+
+                                <Image
+                                    Aspect="Fill"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    Source="@drawable/about"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="工作地点"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    x:Name="MyPlaceLabel"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="未选择"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Source="@drawable/next"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+
+                    <ViewCell Tapped="OnHospitalCell">
+                        <ContentView>
+                            <StackLayout
+                                Padding="10,0,10,0"
+                                BackgroundColor="White"
+                                HeightRequest="60"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="10">
+                                <Image
+                                    Aspect="Fill"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    Source="@drawable/update"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="单位"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    x:Name="MyUnitsLabel"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="未选择"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Source="@drawable/next"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+
+                    <ViewCell Tapped="OnProfessionCell">
+                        <ContentView>
+                            <StackLayout
+                                Padding="10,0,10,0"
+                                BackgroundColor="White"
+                                HeightRequest="60"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="10">
+                                <Image
+                                    Aspect="Fill"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    Source="@drawable/about"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="科室"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    x:Name="MyProfessionLabel"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="未选择"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Source="@drawable/next"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+                    <ViewCell Tapped="OnJobCell">
+                        <ContentView>
+                            <StackLayout
+                                Padding="10,0,10,0"
+                                BackgroundColor="White"
+                                HeightRequest="60"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="10">
+                                <Image
+                                    Aspect="Fill"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    Source="@drawable/about"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="职称"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    x:Name="MyJobLabel"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="未选择"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Source="@drawable/next"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+
+
+
+                    <ViewCell Tapped="OnInterstCell">
+                        <ContentView>
+                            <StackLayout
+                                Padding="10,0,10,0"
+                                BackgroundColor="White"
+                                HeightRequest="60"
+                                HorizontalOptions="FillAndExpand"
+                                Orientation="Horizontal"
+                                Spacing="10">
+                                <Image
+                                    Aspect="Fill"
+                                    HeightRequest="30"
+                                    HorizontalOptions="Start"
+                                    Source="@drawable/about"
+                                    VerticalOptions="Center"
+                                    WidthRequest="30" />
+                                <Label
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"
+                                    Text="擅长领域"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Label
+                                    x:Name="MyInterestLable"
+                                    FontSize="18"
+                                    HorizontalOptions="End"
+                                    Text="未输入"
+                                    TextColor="Black"
+                                    VerticalOptions="Center" />
+                                <Image
+                                    HeightRequest="25"
+                                    HorizontalOptions="End"
+                                    Source="@drawable/next"
+                                    VerticalOptions="Center"
+                                    WidthRequest="25" />
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+
+                </TableSection>
+            </TableRoot>
+
+        </TableView>
+
+    </StackLayout>
+</ContentPage>

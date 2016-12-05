@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IFrame.Views.Friends.AddFriendPage">
+  <StackLayout Spacing="0">
+    <StackLayout Orientation="Horizontal" Spacing="0">
+      <Button BackgroundColor="#ffdda0"
+              HeightRequest="55"
+              WidthRequest="55"
+              BorderRadius="0"
+              HorizontalOptions="Start"
+              Image="@drawable/fanhui"
+              Clicked="OnFhCicked"></Button>
+      <Label BackgroundColor="#ffdda0"
+             Text="添加好友"
+             FontSize="25"
+             FontAttributes="None"
+             HeightRequest="55"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"></Label>
+      <BoxView BackgroundColor="#ffdda0"
+               HeightRequest="55"
+               WidthRequest="55"
+               HorizontalOptions="End"></BoxView>
+    </StackLayout>
+    <ScrollView VerticalOptions="FillAndExpand">
+      <StackLayout BackgroundColor="#f5f5f5" 
+                   Padding="0,20,0,0">
+        <StackLayout Orientation="Horizontal" 
+                     BackgroundColor="White"
+                     Padding="25,0">
+          <Image Source="@drawable/search"
+                 HeightRequest="24"
+                 WidthRequest="24"
+                 HorizontalOptions="Start"
+                 VerticalOptions="Center"></Image>
+          <Entry BackgroundColor="White"
+                 TextColor="Black"
+                 Placeholder="手机号"
+                 PlaceholderColor="Silver"
+                 Keyboard="Text"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Center"
+                 Completed="OnCompleted"/>
+        </StackLayout>
+        <BoxView HorizontalOptions="FillAndExpand"
+                 VerticalOptions="Start"
+                 HeightRequest="20"
+                 BackgroundColor="#f5f5f5">
+        </BoxView>
+        <StackLayout BackgroundColor="White" Spacing="0">
+          <Image Source="@drawable/addressbook"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Start"
+                 HeightRequest="50"
+                 WidthRequest="50">
+          </Image>
+          <Label Text="添加通讯录中的医友"
+                 TextColor="Silver"
+                 FontSize="16"
+                 FontAttributes="None"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Start">
+          </Label>
+          <StackLayout.GestureRecognizers>
+            <TapGestureRecognizer Tapped="OnAddAddressbook" />
+          </StackLayout.GestureRecognizers>
+        </StackLayout>
+        <Label Text="  可能认识的医友" 
+               TextColor="Silver"
+               FontSize="16"
+               HorizontalTextAlignment="Start"
+               VerticalTextAlignment="End"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="Start"
+               HeightRequest="20">
+        </Label>
+        <ListView x:Name="MaybeKnowList" 
+                  ItemsSource="{Binding FriendInformations}"
+                  HasUnevenRows="True"
+                  BackgroundColor="White"
+                  SeparatorColor="#ddd">
+          <ListView.ItemTemplate>
+            <DataTemplate>
+              <ViewCell>
+                <ContentView>
+                   <Grid HorizontalOptions="FillAndExpand" BackgroundColor="White" RowSpacing="5">
+                     <Grid.RowDefinitions>
+                       <RowDefinition Height="35"/>
+                       <RowDefinition Height="27"/>
+                     </Grid.RowDefinitions>
+                   
+                     <Grid.ColumnDefinitions>
+                       <ColumnDefinition Width="70"/>
+                       <ColumnDefinition Width="*"/>
+                       <ColumnDefinition Width="70"/>
+                     </Grid.ColumnDefinitions>
+                   
+                     <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"
+                            Source="{Binding FriendPhoto}"
+                            HeightRequest="60"
+                            WidthRequest="60"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center" />
+                     <StackLayout Grid.Row="0" Grid.Column="1"
+                                  Orientation="Horizontal"
+                                  Spacing="10"
+                                  HorizontalOptions="Start"
+                                  VerticalOptions="End">
+                       <Label Text="{Binding Name}"
+                              FontSize="20"
+                              TextColor="Black"
+                              HorizontalTextAlignment="Center"
+                              VerticalTextAlignment="End"
+                              VerticalOptions="End" />
+                       <Label Text="{Binding Profession}"
+                              TextColor="White"
+                              FontSize="14"
+                              HorizontalTextAlignment="Center"
+                              VerticalTextAlignment="Center"
+                              VerticalOptions="Center"
+                              BackgroundColor="#ffdda0" />
+                       <Label Text="{Binding Hospital}"
+                              TextColor="Silver"
+                              FontSize="16"
+                              HorizontalTextAlignment="Center"
+                              VerticalTextAlignment="Center"
+                              VerticalOptions="Center" />
+                     </StackLayout>
+                     <Label Grid.Row="1" Grid.Column="1"
+                            Text="{Binding MayRelation}"
+                            TextColor="Silver"
+                            FontSize="16"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="Start"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Start" />
+                     <Button Grid.Row="0" Grid.Column="2" Grid.RowSpan="2"
+                             Text="添加"
+                             TextColor="White"
+                             FontAttributes="None"
+                             FontSize="15"
+                             BackgroundColor="#11cd6e"
+                             BorderRadius="5"
+                             HeightRequest="38"
+                             WidthRequest="60"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Clicked="OnAddRecommend" />
+                   </Grid>
+                </ContentView>
+              </ViewCell>
+            </DataTemplate>
+          </ListView.ItemTemplate>
+        </ListView>
+      </StackLayout>
+    </ScrollView>
+  </StackLayout>
+</ContentPage>

@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IFrame.Views.FindDoctor.FindPage">
+  <StackLayout BackgroundColor="#f5f5f5">
+    <Label Text="找医生" 
+           TextColor="White"
+           FontSize="30"
+           HeightRequest="55"
+           BackgroundColor="#ffdda0"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Center"
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="Start"/>
+    <TableView VerticalOptions="Start"
+               Intent="Form">
+      <TableRoot>
+        <TableSection Title="关键词">
+          <ViewCell>
+            <ContentView>
+              <StackLayout Orientation="Horizontal"
+                           Padding="25,0"
+                           BackgroundColor="White"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand">
+                <Image Source="@drawable/find"
+                       HeightRequest="24"
+                       WidthRequest="24"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+                <Entry x:Name="SearchEntry"
+                       Keyboard="Text"
+                       TextColor="Black"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="Center"/>
+              </StackLayout>
+            </ContentView>
+          </ViewCell>
+        </TableSection>
+        <TableSection Title="筛选条件">
+          <ViewCell Tapped="OnPlaceCell">
+            <ContentView>
+              <StackLayout Orientation="Horizontal"
+                           Padding="25,0,10,0"
+                           BackgroundColor="White"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand">
+                <Label Text="地区"
+                       TextColor="Black"
+                       FontSize="20"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"/>
+                <Label x:Name="PlaceLabel"
+                       Text="未选择"
+                       TextColor="Gray"
+                       FontSize="18"
+                       HorizontalTextAlignment="End"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"/>
+                <Image Source="@drawable/next"
+                       HeightRequest="24"
+                       WidthRequest="24"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"/>
+              </StackLayout>
+            </ContentView>
+          </ViewCell>
+          <ViewCell Tapped="OnHospitalCell">
+            <ContentView>
+              <StackLayout Orientation="Horizontal"
+                           Padding="25,0,10,0"
+                           BackgroundColor="White"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand">
+                <Label Text="医院"
+                       TextColor="Black"
+                       FontSize="20"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"/>
+                <Label x:Name="HospitalLabel"
+                       Text="未选择"
+                       TextColor="Gray"
+                       FontSize="18"
+                       HorizontalTextAlignment="End"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"/>
+                <Image Source="@drawable/next"
+                       HeightRequest="24"
+                       WidthRequest="24"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"/>
+              </StackLayout>
+            </ContentView>
+          </ViewCell>
+          <ViewCell Tapped="OnProfessionCell">
+            <ContentView>
+              <StackLayout Orientation="Horizontal"
+                           Padding="25,0,10,0"
+                           BackgroundColor="White"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand">
+                <Label Text="科室"
+                       TextColor="Black"
+                       FontSize="20"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"/>
+                <Label x:Name="ProfessionLabel"
+                       Text="未选择"
+                       TextColor="Gray"
+                       FontSize="18"
+                       HorizontalTextAlignment="End"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"/>
+                <Image Source="@drawable/next"
+                       HeightRequest="24"
+                       WidthRequest="24"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"/>
+              </StackLayout>
+            </ContentView>
+          </ViewCell>
+          <ViewCell Tapped="OnJobCell">
+            <ContentView>
+              <StackLayout Orientation="Horizontal"
+                           Padding="25,0,10,0"
+                           BackgroundColor="White"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="FillAndExpand">
+                <Label Text="职称"
+                       TextColor="Black"
+                       FontSize="20"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"/>
+                <Label x:Name="JobLabel"
+                       Text="未选择"
+                       TextColor="Gray"
+                       FontSize="18"
+                       HorizontalTextAlignment="End"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="CenterAndExpand"/>
+                <Image Source="@drawable/next"
+                       HeightRequest="24"
+                       WidthRequest="24"
+                       HorizontalOptions="End"
+                       VerticalOptions="Center"/>
+              </StackLayout>
+            </ContentView>
+          </ViewCell>
+        </TableSection>
+      </TableRoot>
+    </TableView>
+    <Button Text="搜索"
+            TextColor="White"
+            FontSize="20"
+            BackgroundColor="#ffdda0"
+            WidthRequest="350"
+            HorizontalOptions="Center"
+            Clicked="OnSearchButton"/>
+  </StackLayout>
+</ContentView>

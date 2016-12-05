@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          x:Class="IFrame.Views.Cells.SettingCell">
+  <StackLayout Orientation="Horizontal"
+               Padding="25,0,10,0"
+               Spacing="10"
+               BackgroundColor="White"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="CenterAndExpand">
+    <Image Source="@drawable/setting"
+           HeightRequest="24"
+           WidthRequest="24"
+           HorizontalOptions="Start"
+           VerticalOptions="Center"/>
+    <Label Text="设置"
+           TextColor="Black"
+           FontSize="18"
+           HorizontalTextAlignment="Center"
+           VerticalTextAlignment="Start"
+           HorizontalOptions="StartAndExpand"
+           VerticalOptions="CenterAndExpand"/>
+    <Image Source="@drawable/next"
+           HeightRequest="24"
+           WidthRequest="24"
+           HorizontalOptions="End"
+           VerticalOptions="Center"/>
+  </StackLayout>
+</ViewCell>

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;"
+             x:Class="IFrame.Views.Dialogs.ChangeRelation"
+             IsCloseOnBackgroundClick="false">
+  <Grid BackgroundColor="White" ColumnSpacing="1" HorizontalOptions="Center" VerticalOptions="Center">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="160"/>
+      <ColumnDefinition Width="160"/>
+    </Grid.ColumnDefinitions>
+    
+    <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+          BackgroundColor="White"
+          Padding="10,20,30,20"
+          ColumnSpacing="10"
+          HorizontalOptions="FillAndExpand" 
+          VerticalOptions="FillAndExpand">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="2*"/>
+        <ColumnDefinition Width="3*"/>
+      </Grid.ColumnDefinitions>
+      
+      <Label Grid.Row="0" Grid.Column="0"
+           Text="关    系"
+           TextColor="Black"
+           FontSize="20"
+           HorizontalOptions="End"
+           VerticalOptions="Center"/>
+      <Entry x:Name="RelationEntry"
+           Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" 
+           TextColor="Gray"
+           FontSize="20"
+           Keyboard="Text"
+           HorizontalTextAlignment="Center" 
+           HorizontalOptions="FillAndExpand"
+           VerticalOptions="Center"/>
+      <Label Grid.Row="1" Grid.Column="0"
+             Text="亲密度"
+             TextColor="Black"
+             FontSize="20"
+             HorizontalOptions="End"
+             VerticalOptions="Center"/>
+      <Label x:Name="HeartLabel"
+             Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" 
+             BackgroundColor="White"
+             TextColor="Gray"
+             FontSize="20"
+             HorizontalTextAlignment="Center"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center">
+        <Label.GestureRecognizers>
+          <TapGestureRecognizer Tapped="OnChangeHeart" />
+        </Label.GestureRecognizers>
+      </Label>
+    </Grid>
+    <Button Grid.Row="1" Grid.Column="0"
+            Text="确定"
+            TextColor="White"
+            FontSize="18"
+            BackgroundColor="#ffdda0"
+            BorderRadius="0"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Clicked="OnOkButton"/>
+    <Button Grid.Row="1" Grid.Column="1"
+            Text="取消"
+            TextColor="White"
+            FontSize="18"
+            BackgroundColor="#ffdda0"
+            BorderRadius="0"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="FillAndExpand"
+            Clicked="OnNotButton"/>
+  </Grid>
+</pages:PopupPage>

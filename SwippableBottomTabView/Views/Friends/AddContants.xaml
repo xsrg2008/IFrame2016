@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IFrame.Views.Friends.AddContants">
+  <StackLayout Spacing="0">
+    <StackLayout Orientation="Horizontal" Spacing="0">
+      <Button BackgroundColor="#ffdda0"
+              HeightRequest="55"
+              WidthRequest="55"
+              BorderRadius="0"
+              HorizontalOptions="Start"
+              Image="@drawable/fanhui"
+              Clicked="OnFhCicked"></Button>
+      <Label BackgroundColor="#ffdda0"
+             Text="从通讯录添加好友"
+             FontSize="25"
+             FontAttributes="None"
+             HeightRequest="55"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"></Label>
+      <BoxView BackgroundColor="#ffdda0"
+               HeightRequest="55"
+               WidthRequest="55"
+               HorizontalOptions="End"></BoxView>
+    </StackLayout>
+    <StackLayout BackgroundColor="#f5f5f5"
+                   Padding="0,20,0,0">
+      <ListView x:Name="ContantList"
+                  HasUnevenRows="True"
+                  BackgroundColor="White"
+                  SeparatorColor="#ddd">
+        </ListView>
+      </StackLayout>
+  </StackLayout>
+</ContentPage>

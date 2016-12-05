@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IFrame.Views.Friends.AddNoResults">
+  <StackLayout Spacing="0">
+    <StackLayout Orientation="Horizontal" Spacing="0">
+      <Button BackgroundColor="#ffdda0"
+              HeightRequest="55"
+              WidthRequest="55"
+              BorderRadius="0"
+              HorizontalOptions="Start"
+              Image="@drawable/fanhui"
+              Clicked="OnFhCicked"></Button>
+      <Label BackgroundColor="#ffdda0"
+             Text="查找结果"
+             FontSize="25"
+             FontAttributes="None"
+             HeightRequest="55"
+             HorizontalOptions="FillAndExpand"
+             VerticalOptions="Center"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"></Label>
+      <BoxView BackgroundColor="#ffdda0"
+               HeightRequest="55"
+               WidthRequest="55"
+               HorizontalOptions="End"></BoxView>
+    </StackLayout>
+    <ListView x:Name="ResultList"
+              ItemsSource="{Binding Results}"
+              HasUnevenRows="True"
+              BackgroundColor="#f5f5f5"
+              SeparatorColor="#ddd"
+              VerticalOptions="FillAndExpand">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <ContentView>
+              <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="White" Padding="15,10,15,10">
+                  <Label Text="{Binding number}"
+                         FontSize="24"
+                         TextColor="Black"
+                         HorizontalTextAlignment="Start"
+                         VerticalTextAlignment="Center"
+                         HorizontalOptions="StartAndExpand"
+                         VerticalOptions="Center" />
+                  <Button Text="邀请"
+                        TextColor="White"
+                        FontAttributes="None"
+                        FontSize="15"
+                        BackgroundColor="#11cd6e"
+                        BorderRadius="5"
+                        HeightRequest="38"
+                        WidthRequest="60"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                        Clicked="OnAddRecommend" />
+              </StackLayout>
+            </ContentView>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+
+  </StackLayout>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IFrame.Views.Cells.NameListCell">
+  <StackLayout Orientation="Horizontal"
+               Spacing="10"
+               Padding="15,15,15,15"
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand">
+      <Label Text="{Binding Name}"
+             FontSize="20"
+             TextColor="Black"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+             HorizontalOptions="Start"
+             VerticalOptions="Center"/>
+      <Label Text="{Binding Profession}"
+             FontSize="14"
+             TextColor="White"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+             BackgroundColor="#ffdda0"
+             HorizontalOptions="Start"
+             VerticalOptions="Center"/>
+      <Label Text="{Binding Hospital}"
+             TextColor="Gray"
+             FontSize="16"
+             HorizontalTextAlignment="Start"
+             VerticalTextAlignment="Center"
+             HorizontalOptions="StartAndExpand"
+             VerticalOptions="Center"/>
+      <Image Source="{Binding Icon}"
+             HeightRequest="25"
+             WidthRequest="25"
+             Aspect="Fill"
+             HorizontalOptions="End"
+             VerticalOptions="Center"/>
+  </StackLayout>
+</ViewCell>
